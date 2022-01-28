@@ -3,7 +3,9 @@ import {
 } from 'vuex'
 
 export default createStore({
-  state: {},
+  state: {
+    username: 'zhangsan'
+  },
   getters: {},
   mutations: {},
   actions: {},
