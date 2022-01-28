@@ -1,5 +1,5 @@
 <template>
-  App
+  App1
 </template>
 
 <script>
