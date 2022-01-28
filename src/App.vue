@@ -1,5 +1,6 @@
 <template>
-  1
+  App{{$store.state.user.profile.account}}
+  <button @click="$store.commit('user/setUser',{account:'章三'})">设置用户信息</button>
 </template>
 
 <script>
@@ -11,8 +12,6 @@
   } from 'vuex'
   export default {
     setup() {
-      const store = useStore()
-      console.log()
       return {
 
       }
