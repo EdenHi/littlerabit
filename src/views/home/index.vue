@@ -1,14 +1,14 @@
 <template>
-  <RouterView />
+  HomePage
 </template>
 
 <script>
   export default {
-
+    name: 'HomePage'
   }
 
 </script>
 
-<style>
+<style lang="less" scoped>
 
 </style>
