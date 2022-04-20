@@ -7,4 +7,5 @@ import store from './store'
 // 重置样式库
 import 'normalize.css'
 import '@/assets/styles/common.less'
-createApp(App).use(store).use(router).mount('#app')
+import ui from './components/library'
+createApp(App).use(store).use(router).use(ui).mount('#app')

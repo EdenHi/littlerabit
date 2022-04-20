@@ -4,19 +4,38 @@
       <div class="container">
         <!-- 左侧分类 -->
         <HomeCategory />
+        <!-- 轮播图 -->
+        <HomeBanner/>
+
+        <HomeNew/>
+        <HomeHot/>
+        <HomeBrand/>
+        <HomeProduct/>
+        <HomeSpecial/>
+        <XtxBread parentPath="/category/1005000" parentName="电器">空调</XtxBread>
       </div>
     </div>
   </div>
 </template>
 <script>
-  import {
-    useStore
-  } from 'vuex'
+
   import HomeCategory from '@/components/home-category.vue'
+  import HomeBanner from '@/components/home-banner.vue'
+  import HomeNew from '@/components/home-new.vue'
+  import HomeHot from '@/components/home-hot.vue'
+  import HomeBrand from '@/components/home-brand'
+  import HomeProduct from '@/components/home-product'
+  import HomeSpecial from '@/components/home-special'
   export default {
     name: 'PageHome',
     components: {
-      HomeCategory
+      HomeCategory,
+      HomeBanner,
+      HomeNew,
+      HomeHot,
+      HomeBrand,
+      HomeProduct,
+      HomeSpecial
     }
   }
 
