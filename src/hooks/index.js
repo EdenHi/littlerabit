@@ -16,7 +16,6 @@ import { ref } from 'vue'
           stop()
           // 调用API获取数据
           apiFn().then(data => {
-              console.log('@@@', apiFn.name)
             result.value = data.result
           })
         }

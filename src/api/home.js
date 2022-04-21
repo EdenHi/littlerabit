@@ -21,6 +21,5 @@ export const findBanner = () => {
     return request('home/goods', 'get')
   }
   export const findSpecial = () => {
-    console.log('@@@@@')
     return request('home/special', 'get')
   }
