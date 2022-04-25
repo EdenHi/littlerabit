@@ -5,6 +5,7 @@
       <span class="title">{{goodsId?'同类商品推荐':'猜你喜欢'}}</span>
     </div>
     <!-- 此处使用改造后的xtx-carousel.vue -->
+     <XtxCarousel :sliders="sliders" style="height:380px" auto-play />
   </div>
 </template>
 
@@ -70,6 +71,28 @@ export default {
         left: 0;
         top: 2px;
         background: lighten(@xtxColor, 40%);
+      }
+    }
+  }
+}
+:deep(.xtx-carousel) {
+  height: 380px;
+  .carousel {
+    &-indicator {
+      bottom: 30px;
+      span {
+        &.active {
+          background: @xtxColor;
+        }
+      }
+    }
+    &-btn {
+      top: 110px;
+      opacity: 1;
+      background: rgba(0,0,0,0);
+      color: #ddd;
+      i {
+        font-size: 30px;
       }
     }
   }
