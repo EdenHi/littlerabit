@@ -16,23 +16,23 @@
         <h3>全部分类</h3>
         <ul>
           <li v-for="item in topCategory.children" :key="item.id">
-            <a href="javascript:;">
+            <RouterLink :to="`/category/sub/${item.id}`">
               <img :src="item.picture" alt="">
               <p>{{item.name}}</p>
-            </a>
+            </RouterLink>
           </li>
         </ul>
       </div>
       <!-- 不同分类商品 -->
     </div>
           <!-- 分类关联商品 -->
-      <div class="ref-goods" v-for="item in subList" :key="item.id">
-        <div class="head">
+      <div class="ref-goods" v-for="item in subList" :key="item.id" >
+        <div class="head" v-if="item.goods.length>0">
           <h3>- {{item.name}} -</h3>
           <p class="tag">{{item.desc}}</p>
           <XtxMore />
         </div>
-        <div class="body">
+        <div class="body" v-if="item.goods.length>0">
           <GoodsItem v-for="g in item.goods" :key="g.id" :goods="g" />
         </div>
       </div>

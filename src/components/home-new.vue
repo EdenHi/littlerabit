@@ -7,7 +7,7 @@
       <Transition name="fade">
         <ul v-if="goods.length" ref="pannel" class="goods-list">
           <li v-for="item in goods" :key="item.id">
-            <RouterLink to="/">
+            <RouterLink :to="`/product/${item.id}`">
               <img :src="item.picture" alt="">
               <p class="name">{{item.name}}</p>
               <p class="price">&yen;{{item.price}}</p>
@@ -56,6 +56,7 @@ export default {
     }
     .price {
       color: @priceColor;
+      margin-top: -15px;
     }
   }
 }
